@@ -90,3 +90,41 @@ document.getElementById("logoutBtn").addEventListener("click", function() {
     }
 
 });
+
+
+// ===================================
+// UNIVERSITY DROPDOWN FUNCTIONALITY
+// ===================================
+
+const universityToggle = document.getElementById("universityToggle");
+
+const universitySubmenu = document.getElementById("universitySubmenu");
+
+const universityArrow = document.getElementById("universityArrow");
+
+const publicUniversityLink = document.getElementById("publicUniversityLink");
+
+
+// Open and close University submenu
+universityToggle.addEventListener("click", function() {
+
+    const isExpanded =
+        universityToggle.getAttribute("aria-expanded") === "true";
+
+    universityToggle.setAttribute("aria-expanded", String(!isExpanded));
+
+    universitySubmenu.hidden = isExpanded;
+
+    universityArrow.textContent = isExpanded ? "+" : "−";
+
+});
+
+
+// Public University
+publicUniversityLink.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    alert("Public University Dashboard has not been created yet.");
+
+});

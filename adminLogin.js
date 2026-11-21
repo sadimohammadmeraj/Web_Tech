@@ -2,7 +2,7 @@
 const form = document.getElementById("adminForm");
 
 // Get input fields
-const name = document.getElementById("name");
+const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 
@@ -24,8 +24,12 @@ form.addEventListener("submit", function(event) {
     let isValid = true;
 
     // Username Validation
-    if (name.value.trim() === "") {
+    if (username.value.trim() === "") {
         userNameError.textContent = "Username is required";
+        isValid = false;
+    }
+    else if (username.value.trim() !== "admin") {
+        userNameError.textContent = "Invalid username";
         isValid = false;
     }
 
@@ -34,8 +38,8 @@ form.addEventListener("submit", function(event) {
         emailError.textContent = "Email is required";
         isValid = false;
     }
-    else if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        emailError.textContent = "Enter a valid email address";
+    else if (email.value.trim() !== "admin123@gmail.com") {
+        emailError.textContent = "Invalid email address";
         isValid = false;
     }
 
@@ -44,8 +48,8 @@ form.addEventListener("submit", function(event) {
         passwordError.textContent = "Password is required";
         isValid = false;
     }
-    else if (password.value.length < 6) {
-        passwordError.textContent = "Password must be at least 6 characters";
+    else if (password.value !== "admin123") {
+        passwordError.textContent = "Incorrect password";
         isValid = false;
     }
 
@@ -53,8 +57,8 @@ form.addEventListener("submit", function(event) {
     if (isValid) {
         alert("Login Successful!");
 
-        // Redirect to dashboard
-        window.location.href = "dashboard.html";
+        // Redirect to  admin dashboard
+        window.location.href = "adminDashboard.html";
     }
 
 });

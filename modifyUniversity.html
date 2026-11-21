@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modify University</title>
+
+    <link rel="stylesheet" href="modifyUniversity.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="page-header">
+
+            <div>
+                <h1>Modify University</h1>
+                <p>Select a university category to manage university information.</p>
+            </div>
+
+            <a href="adminDashboard.html" class="back-button">
+                Back to Dashboard
+            </a>
+
+        </header>
+
+
+        <!-- University Categories -->
+        <section class="university-options">
+
+            <!-- Public University -->
+            <div class="university-card">
+
+                <div class="card-icon">🏛️</div>
+
+                <h2>Public University</h2>
+
+                <p>
+                    Manage public university information,
+                    edit details and remove universities.
+                </p>
+
+                <button type="button" id="publicUniversityBtn">
+                    Select Public University
+                </button>
+
+            </div>
+
+
+            <!-- Private University -->
+            <div class="university-card">
+
+                <div class="card-icon">🏢</div>
+
+                <h2>Private University</h2>
+
+                <p>
+                    Search, edit and remove private university
+                    information from the university list.
+                </p>
+
+                <button type="button" id="privateUniversityBtn">
+                    Select Private University
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="modifyUniversity.js"></script>
+
+</body>
+</html>

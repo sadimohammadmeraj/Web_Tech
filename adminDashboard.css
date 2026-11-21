@@ -59,6 +59,72 @@ body {
     color: white;
 }
 
+/* University Menu */
+.sidebar-menu .university-menu {
+    margin-bottom: 12px;
+}
+
+/* University Button */
+.menu-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 15px;
+
+    background-color: transparent;
+    color: #cbd5e1;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    text-align: left;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-toggle:hover,
+.menu-toggle[aria-expanded="true"] {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* University Submenu */
+.sidebar-menu .submenu {
+    list-style: none;
+
+    margin: 6px 0 0 12px;
+    padding-left: 10px;
+
+    border-left: 2px solid #64748b;
+}
+
+/* Hide submenu when closed */
+.sidebar-menu .submenu[hidden] {
+    display: none;
+}
+
+.sidebar-menu .submenu li {
+    margin-bottom: 5px;
+}
+
+.sidebar-menu .submenu a {
+    display: block;
+
+    padding: 10px 12px;
+
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.sidebar-menu .submenu a:hover {
+    background-color: #334155;
+    color: white;
+}
+
 /* Logout */
 .logout-section {
     margin-top: auto;

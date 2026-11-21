@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <div class="container">
+    <h2>Registration Form</h2>
+
+    <form id="myForm" novalidate>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <span class="error" id="nameError"></span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter your email">
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        <span class="error" id="passwordError"></span>
+      </div>
+
+      <!-- Gender -->
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="options">
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+        <span class="error" id="genderError"></span>
+      </div>
+
+      <!-- Department -->
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select id="department">
+          <option value="">-- Select Department --</option>
+          <option value="CSE">CSE</option>
+          <option value="EEE">EEE</option>
+          <option value="BBA">BBA</option>
+          <option value="English">English</option>
+        </select>
+        <span class="error" id="departmentError"></span>
+      </div>
+
+      <!-- Skills -->
+      <div class="form-group">
+        <label>Skills</label>
+        <div class="options">
+          <label><input type="checkbox" name="skill" value="HTML"> HTML</label>
+          <label><input type="checkbox" name="skill" value="CSS"> CSS</label>
+          <label><input type="checkbox" name="skill" value="JavaScript"> JavaScript</label>
+        </div>
+        <span class="error" id="skillError"></span>
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" rows="3" placeholder="Enter your address"></textarea>
+        <span class="error" id="addressError"></span>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

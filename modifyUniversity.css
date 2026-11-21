@@ -1,0 +1,113 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #64748b;
+}
+
+.back-button {
+    text-decoration: none;
+    background-color: #1e293b;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+.back-button:hover {
+    background-color: #334155;
+}
+
+/* University Cards */
+.university-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.university-card {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.university-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.university-card h2 {
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.university-card p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.university-card button {
+    width: 100%;
+    padding: 13px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.university-card button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+
+    .university-options {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
